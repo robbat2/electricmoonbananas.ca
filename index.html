@@ -1,7 +1,8 @@
 <html>
-<?php include('moonphase-wrapper.inc.php'); ?>
 <head>
 <title>emb</title>
+<script src="moonphase.inc.js"></script>
+<script src="moonphase-wrapper.inc.js"></script>
 </head>
 <body bgcolor="#000000" text="#ffffff">
 <center>
@@ -29,8 +30,10 @@ like to be notified of future rides, send me an email
 
 <hr>
 
-(percentage of moon goes here in the footer)
-<?php echo do_phase(time()); ?>
+<span id="pom"></span>
 </center>
+<script>
+    document.getElementById("pom").textContent = do_phase()
+</script>
 </body>
 </html>
