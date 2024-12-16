@@ -1,7 +1,8 @@
 <html>
-<?php include('moonphase-wrapper.inc.php'); ?>
 <head>
 <title>emb</title>
+<script src="moonphase.inc.js"></script>
+<script src="moonphase-wrapper.inc.js"></script>
 </head>
 <body bgcolor="#000000" text="#ffffff">
 <center>
@@ -19,9 +20,7 @@ Ride every saturday closest to the full moon!
 <p>Meet at union and hawks, east vancouver, canaduh, between 10 and 11 pm. Continue onwards at 11pm.</p>
 
 <hr>
-<p>The mailing list was decommisioned due to low usage.</p>
-
-<p style="text-decoration: line-through">We have a mailing list (ride-electricmoonbananas-ca).  If you would
+<p>We have a mailing list (ride-electricmoonbananas-ca).  If you would
 like to be notified of future rides, send me an email
 (listmaster-electricmoonbananas-ca) and I'll put you on the list.</p>
 
@@ -29,8 +28,10 @@ like to be notified of future rides, send me an email
 
 <hr>
 
-(percentage of moon goes here in the footer)
-<?php echo do_phase(time()); ?>
+<span id="pom"></span>
 </center>
+<script>
+    document.getElementById("pom").textContent = do_phase()
+</script>
 </body>
 </html>
